@@ -4,20 +4,6 @@
 #include <string>
 #include <stdio.h>
 #include <iostream>
-
-// required official mysql C library
-// on Debian-like distributions issue the command "sudo apt install libmysqlclient-dev"
-// try with "sudo apt install default-libmysqlclient-dev" as an alternative
-// look for an equivalent one if you are on a different OS or Linux distribution
-// using GCC (tested on Debian buster/sid & GCC 8.2.0-13), build with lmysqlclient flag 
-// example: "g++ program main.o *...* -lmysqlclient"
-
-// if you cannot locate the package you are probably missing the mysql repositories
-// go to "https://repo.mysql.com/" and download "mysql-apt-config_*LATEST VERSION NUMBER*_all.deb"
-// you can download it using "curl *DOWNLOAD LINK* --output pkg.deb" or via browser
-// install it using "dpkg -i pkg.deb" and choose your system version or the latest one
-// after having added mysql repos you should be able to "sudo apt install libmysqlclient-dev"
-
 #include <mysql/mysql.h>
 
 // pointer to connection handler
@@ -139,13 +125,3 @@ void example(const char *host_name, const char *user_name, const char *password,
 	std::cout << "all operations completed" << std::endl;
 	return;
 }
-
-
-// a very simple example.cpp file, that's everything you need
-// compile it with "g++ example example.cpp -lmysqlclient"
-
-// example.cpp:
-//	#include "mysql_wrapper.h"
-//	example("my_hostname", "my_user", "my_password", 
-//		"SELECT * FROM myschema.mydatabase", 
-//		"INSERT INTO myschema.mydatabase (col1,col2,col3) VALUES (1,2,3)");
