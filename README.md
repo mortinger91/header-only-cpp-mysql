@@ -26,12 +26,18 @@ install it using "dpkg -i pkg.deb" and choose your system version or the latest 
 after having added mysql repos you should be able to "sudo apt install libmysqlclient-dev"
 
 
+
+
+
+
+
 **EXAMPLE**
 
 A very simple example.cpp file, that's everything you need to test the functions
 compile it with "g++ example example.cpp -lmysqlclient"
 
 example.cpp:
+
 	#include "mysql_wrapper.h"
 	example("my_hostname", "my_user", "my_password", 
 		"SELECT * FROM myschema.mydatabase", 
