@@ -9,19 +9,19 @@ Following, a few more informations:
 * example function
 * example cpp file
 
-The official mysql C library is required and is the only dependency.
-On Debian-like distributions issue the command "*sudo apt install libmysqlclient-dev*".
+The official mysql C library is required and is the only dependency.\n
+On Debian-like distributions issue the command "*sudo apt install libmysqlclient-dev*".\n
 Try with "*sudo apt install default-libmysqlclient-dev*" as an alternative.
 
-Look for an equivalent one if you are on a different OS or Linux distribution.
-Using GCC build with **lmysqlclient** flag (tested on Debian buster/sid & GCC 8.2.0-13).
+Look for an equivalent one if you are on a different OS or Linux distribution.\n
+Using GCC build with **lmysqlclient** flag (tested on Debian buster/sid & GCC 8.2.0-13).\n
 Example: "*g++ program main.o ... -lmysqlclient*".
 
-If you cannot locate the package you are probably missing the mysql repositories.
+If you cannot locate the package you are probably missing the mysql repositories.\n
 Go to "*https://repo.mysql.com/*" and download the file "*mysql-apt-config_LATEST_VERSION_NUMBER_all.deb*".
 
-You can download it using "curl *DOWNLOAD LINK* --output pkg.deb" or via browser.
-Install it using "*sudo dpkg -i pkg.deb*" and choose your system version or the latest one.
+You can download it using "curl *DOWNLOAD LINK* --output pkg.deb" or via browser.\n
+Install it using "*sudo dpkg -i pkg.deb*" and choose your system version or the latest one.\n
 After having added mysql repos you should be able to "*sudo apt install libmysqlclient-dev*".
 
 **EXAMPLE:**
