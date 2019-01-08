@@ -25,7 +25,7 @@ If you cannot locate the package you are probably missing the mysql repositories
 
 Go to "*https://repo.mysql.com/*" and download the file "*mysql-apt-config_LATEST_VERSION_NUMBER_all.deb*".
 
-You can download it using "curl *DOWNLOAD LINK* --output pkg.deb" or via browser.
+You can download it using "*curl DOWNLOAD LINK --output pkg.deb*" or via browser.
 
 Install it using "*sudo dpkg -i pkg.deb*" and choose your system version or the latest one.
 
