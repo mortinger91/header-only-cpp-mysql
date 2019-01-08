@@ -20,6 +20,7 @@ bool mysql_connect(const char *host_name, const char *user_name, const char *pas
         fprintf (stderr, "mysql_init() failed\n");
         return false;
     }
+    
     // schema's name, connection port, unix_socket and flags are hard-coded for simplicity
     // modify these values or make them variables if you need more control
     // you can always specify the schema's name in the queries so that's not necessary
