@@ -30,7 +30,7 @@ bool mysql_connect(const char *host_name, const char *user_name, const char *pas
 				mysql_errno (conn), mysql_error (conn));
 		return false;
 	}
-return true;     // connection is established
+  return true;     // connection is established
 }
 
 // close connection to the server
