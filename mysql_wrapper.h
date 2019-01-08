@@ -14,23 +14,23 @@ MYSQL *conn;
 // connect to the endpoint
 bool mysql_connect(const char *host_name, const char *user_name, const char *password)
 {
-	conn = mysql_init (NULL);     // allocate, initialize connection handler
-	if (conn == NULL)
-	{
-		fprintf (stderr, "mysql_init() failed\n");
-		return false;
-	}
-	// schema's name, connection port, unix_socket and flags are hard-coded for simplicity
-	// modify these values or make them variables if you need more control
-	// you can always specify the schema's name in the queries so that's not necessary
-	if (mysql_real_connect (conn, host_name, user_name, password, 
-		NULL, 3306, NULL, 0) == NULL)
-	{
-		fprintf (stderr, "mysql_real_connect() failed:\nError %u (%s)\n", 
-				mysql_errno (conn), mysql_error (conn));
-		return false;
-	}
-  return true;     // connection is established
+    conn = mysql_init (NULL);     // allocate, initialize connection handler
+    if (conn == NULL)
+    {
+        fprintf (stderr, "mysql_init() failed\n");
+        return false;
+    }
+    // schema's name, connection port, unix_socket and flags are hard-coded for simplicity
+    // modify these values or make them variables if you need more control
+    // you can always specify the schema's name in the queries so that's not necessary
+    if (mysql_real_connect (conn, host_name, user_name, password, 
+        NULL, 3306, NULL, 0) == NULL)
+    {
+        fprintf (stderr, "mysql_real_connect() failed:\nError %u (%s)\n", 
+                mysql_errno (conn), mysql_error (conn));
+        return false;
+    }
+    return true;     // connection is established
 }
 
 // close connection to the server
@@ -96,8 +96,8 @@ bool mysql_insert(std::string insertQuery_string)
 	const char* insertQuery = &insertQuery_string[0];
 	if (mysql_query (conn, insertQuery) != 0)
 	{
-		std::cout << "INSERT statement failed" << std::endl;
-		return false;
+      std::cout << "INSERT statement failed" << std::endl;
+      return false;
 	}
 	std::cout << "INSERT statement succeeded: " << (unsigned long) mysql_affected_rows (conn) 
 		<< " rows affected" << std::endl;
