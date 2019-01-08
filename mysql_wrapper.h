@@ -73,20 +73,20 @@ bool mysql_print_select(std::string selectQuery_string)
         fputc ('\n', stdout);
     }
 
-	// error checking
-	if (mysql_errno (conn) != 0)
-	{
+    // error checking
+    if (mysql_errno (conn) != 0)
+    {
         std::cout << "mysql_fetch_row() failed" << std::endl;
-	}
-	else
-	{
+    }
+    else
+    {
         std::cout << (unsigned long) mysql_num_rows (res_set) 
             << " rows returned" << std::endl;
-	}
+    }
 
-	// freeing the memory allocated for the result set
-	mysql_free_result (res_set);
-	return true;
+    // freeing the memory allocated for the result set
+    mysql_free_result (res_set);
+    return true;
 }
 
 // function for a INSERT query
