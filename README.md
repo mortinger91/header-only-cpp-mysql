@@ -1,7 +1,7 @@
 # easy-cpp-mysql
 Very easy HEADER-ONLY C++ Mysql Wrapper
 
-Only .h file, just past it into your project
+Only .h file, just paste it into your project
 
 Following, a few more informations:
 * build instructions
