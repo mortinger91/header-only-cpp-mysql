@@ -9,35 +9,24 @@ Following, a few more informations:
 * example function
 * example cpp file
 
-The official mysql C library is required and is the only dependency
-on Debian-like distributions issue the command "*sudo apt install libmysqlclient-dev*"
-try with "*sudo apt install default-libmysqlclient-dev*" as an alternative.
+The official mysql C library is required and is the only dependency.
+On Debian-like distributions issue the command "*sudo apt install libmysqlclient-dev*".
+Try with "*sudo apt install default-libmysqlclient-dev*" as an alternative.
 
+Look for an equivalent one if you are on a different OS or Linux distribution.
+Using GCC build with **lmysqlclient** flag (tested on Debian buster/sid & GCC 8.2.0-13).
+Example: "*g++ program main.o ... -lmysqlclient*".
 
-Look for an equivalent one if you are on a different OS or Linux distribution
-using GCC build with **lmysqlclient** flag (tested on Debian buster/sid & GCC 8.2.0-13)
-example: "*g++ program main.o ... -lmysqlclient*".
+If you cannot locate the package you are probably missing the mysql repositories.
+Go to "*https://repo.mysql.com/*" and download the file "*mysql-apt-config_LATEST_VERSION_NUMBER_all.deb*".
 
-
-If you cannot locate the package you are probably missing the mysql repositories
-go to "*https://repo.mysql.com/*" and download the file
-"*mysql-apt-config_LATEST_VERSION_NUMBER_all.deb*".
-
-
-You can download it using "curl *DOWNLOAD LINK* --output pkg.deb" or via browser
-install it using "*sudo dpkg -i pkg.deb*" and choose your system version or the latest one
-after having added mysql repos you should be able to "*sudo apt install libmysqlclient-dev*"
-
-
-
-
-
-
+You can download it using "curl *DOWNLOAD LINK* --output pkg.deb" or via browser.
+Install it using "*sudo dpkg -i pkg.deb*" and choose your system version or the latest one.
+After having added mysql repos you should be able to "*sudo apt install libmysqlclient-dev*".
 
 **EXAMPLE:**
 
-A very simple example.cpp file, that's everything you need to test the functions
-
+A very simple example.cpp file, that's everything you need to test the functions.
 compile it with "*g++ example example.cpp -lmysqlclient*"
 
 *example.cpp:*
