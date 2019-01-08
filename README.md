@@ -34,7 +34,8 @@ After having added mysql repos you should be able to "*sudo apt install libmysql
 **EXAMPLE:**
 
 A very simple example.cpp file, that's everything you need to test the functions.
-compile it with "*g++ example example.cpp -lmysqlclient*"
+
+Compile it with "*g++ example example.cpp -lmysqlclient*"
 
 *example.cpp:*
 
