@@ -36,6 +36,7 @@ After having added mysql repos you should be able to "*sudo apt install libmysql
 A very simple example.cpp file, that's everything you need to test the functions.
 
 Compile it with "*g++ example example.cpp -lmysqlclient*"
+Execute it with "*./example*"
 
 *example.cpp:*
 
@@ -43,3 +44,11 @@ Compile it with "*g++ example example.cpp -lmysqlclient*"
 	example("my_hostname", "my_user", "my_password", 
 		"SELECT * FROM myschema.mydatabase", 
 		"INSERT INTO myschema.mydatabase (col1,col2,col3) VALUES (1,2,3)");
+		
+	int main(int argc, char *argv[])
+	{
+		example("my_hostname", "my_user", "my_password", 
+		"SELECT * FROM myschema.mydatabase", 
+		"INSERT INTO myschema.mydatabase (col1,col2,col3) VALUES (1,2,3)");
+		return 0;
+	}
