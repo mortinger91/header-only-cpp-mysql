@@ -41,9 +41,6 @@ Execute it with "*./example*"
 *example.cpp:*
 
 	#include "mysql_wrapper.h"
-	example("my_hostname", "my_user", "my_password", 
-		"SELECT * FROM myschema.mydatabase", 
-		"INSERT INTO myschema.mydatabase (col1,col2,col3) VALUES (1,2,3)");
 		
 	int main(int argc, char *argv[])
 	{
